@@ -23,19 +23,15 @@ Steps & Process Overview
     o	Selected the best depth based on training F1-score.
     o	Evaluated final model on the test set.
 
-Methodology-	
+Methodology-
 
-    • Supervised Learning Framework: Classification problem using SVM and Decision Tree algorithms.
+   1. Supervised Learning Framework: Classification problem using SVM and Decision Tree algorithms.
+   2. Evaluation Metrics: Accuracy, precision, recall, F1-score, and ROC–AUC were chosen to assess both balance and discriminative ability between stable vs. unstable states.
+   3. Hyperparameter Tuning Strategy:
+            o	For SVM: varied C values to control regularization strength and used fixed gamma (‘scale’).
+            o	For Decision Trees: tuned tree depth to find the optimal balance between underfitting and overfitting.
+            o	All experiments used the same train–test split for fairness and comparability.
     
-    • Evaluation Metrics:
-            Accuracy, precision, recall, F1-score, and ROC–AUC were chosen to assess both balance and discriminative ability between stable vs. unstable states.
-            
-    • Hyperparameter Tuning Strategy:
-    
-          o	For SVM: varied C values to control regularization strength and used fixed gamma (‘scale’).
-          o	For Decision Trees: tuned tree depth to find the optimal balance between underfitting and overfitting.
-          o	All experiments used the same train–test split for fairness and comparability.
-
 Conclusion
 
 The RBF SVM delivered the highest overall performance, achieving strong accuracy and excellent ROC–AUC, indicating clear separability between classes. Tuning the C parameter significantly improved results for polynomial and RBF kernels, showing that model performance is highly sensitive to regularization. The Decision Tree achieved good results at max_depth=15 but was outperformed by the tuned SVM models. 
