@@ -24,9 +24,12 @@ Steps & Process Overview
     o	Evaluated final model on the test set.
 
 Methodology-	
+
     • Supervised Learning Framework: Classification problem using SVM and Decision Tree algorithms.
+    
     • Evaluation Metrics:
             Accuracy, precision, recall, F1-score, and ROC–AUC were chosen to assess both balance and discriminative ability between stable vs. unstable states.
+            
     • Hyperparameter Tuning Strategy:
     
           o	For SVM: varied C values to control regularization strength and used fixed gamma (‘scale’).
